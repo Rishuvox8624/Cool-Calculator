@@ -21,11 +21,10 @@ sym_dict['+'] = ('add', 'Corban S.')
 
 # Desired Functionality: (- a b) = ???
 
-def subtract(a, b):
-    return 0
+def subtract(a,b):
+	return a-b
 
-
-sym_dict['-'] = ()
+sym_dict['-'] = ('subtract', 'Nic')
 ############################################################
 
 
