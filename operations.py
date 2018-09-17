@@ -43,7 +43,7 @@ sym_dict['/'] = ()
 
 
 
-com# MULTIPLICATION Operation Entry ###########################
+# MULTIPLICATION Operation Entry ###########################
 
 # Desired Functionality: (* a b) = ???
 
@@ -62,11 +62,13 @@ sym_dict['*'] = ()
 # Hint: exponentiation in python is performed with the `**` symbol
 
 def power(a, b):
-    return 0
+    return a**b
+    # return 0
 
-
-sym_dict['^'] = ()
+sym_dict['^'] = ('exp','does it work?')
 ############################################################
+
+
 
 # AND Operation Entry ###########################
 
