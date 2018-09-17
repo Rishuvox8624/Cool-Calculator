@@ -5,7 +5,6 @@ sym_dict = {}
 
 
 # ADDITION Operation Entry #################################
-
 # Desired Functionality: (+ a b) = a + b
 
 def add(a, b):
@@ -18,7 +17,6 @@ sym_dict['+'] = ('add', 'Corban S.')
 
 
 # SUBTRACTION Operation Entry ##############################
-
 # Desired Functionality: (- a b) = a-b
 
 def subtract(a, b):
@@ -30,7 +28,6 @@ sym_dict['-'] = ('subtract', 'Nic & iguptasn')
 
 
 # DIVISION Operation Entry #################################
-
 # Desired Functionality: (/ a b) = ???
 
 def divide(a, b):
@@ -43,7 +40,6 @@ sym_dict['/'] = ()
 
 
 # MULTIPLICATION Operation Entry ###########################
-
 # Desired Functionality: (* a b) = ???
 
 def multiply(a, b):
@@ -56,7 +52,6 @@ sym_dict['*'] = ()
 
 
 # EXPONENTIATION Operation Entry ###########################
-
 # Desired Functionality: (^ a b) = ???
 # Hint: exponentiation in python is performed with the `**` symbol
 
@@ -64,13 +59,12 @@ def power(a, b):
     return a**b
     # return 0
 
-sym_dict['^'] = ('exp','does it work?')
+sym_dict['^'] = ('exp','does it work? - YoungGyu')
 ############################################################
 
 
 
 # AND Operation Entry ###########################
-
 # Desired Functionality: (& a b) = a & b
 # Hint: exponentiation in python is performed with the `**` symbol
 
