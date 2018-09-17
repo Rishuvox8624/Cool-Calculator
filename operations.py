@@ -62,7 +62,7 @@ sym_dict['*'] = ()
 # Hint: exponentiation in python is performed with the `**` symbol
 
 def power(a, b):
-    return a^b
+    return a**b
     # return 0
 
 
