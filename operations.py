@@ -22,10 +22,9 @@ sym_dict['+'] = ('add', 'Corban S.')
 # Desired Functionality: (- a b) = a-b
 
 def subtract(a, b):
-    return a-b
+	return a-b
 
-
-sym_dict['-'] = ('subtract', 'Mr. Swain')
+sym_dict['-'] = ('subtract', 'Nic & iguptasn')
 ############################################################
 
 
@@ -62,8 +61,22 @@ sym_dict['*'] = ()
 # Hint: exponentiation in python is performed with the `**` symbol
 
 def power(a, b):
-    return 0
+    return a**b
+    # return 0
+
+sym_dict['^'] = ('exp','does it work?')
+############################################################
 
 
-sym_dict['^'] = ()
+
+# AND Operation Entry ###########################
+
+# Desired Functionality: (& a b) = a & b
+# Hint: exponentiation in python is performed with the `**` symbol
+
+def _and(a, b):
+    return a & b
+
+
+sym_dict['&'] = ('_and', 'Corban Swain')
 ############################################################
