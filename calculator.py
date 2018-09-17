@@ -110,3 +110,10 @@ if __name__ == "__main__":
     print('%s = %f' % (test_str, compute(test_str)))
 
 
+#subtraction entry
+#desired functionality (- a b) = a-b
+
+def subtract(a,b)
+	return a-b
+sym_dict['-'] = ('subtract', 'Nic')
+########
