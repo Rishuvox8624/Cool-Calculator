@@ -3,6 +3,7 @@
 
 from enum import Enum, auto
 import operations
+import pprint as pp
 
 
 class Token(Enum):
@@ -55,16 +56,16 @@ def lex(string):
     return tokens
 
 
-def get_arg_tup(tokens):
+def parse_helper(param_tokens):
     def pop_next():
-        return tokens.pop(0)
+        return param_tokens.pop(0)
 
     def peek_next():
-        return tokens[0]
+        return param_tokens[0]
 
     def get_next_expr():
         i = 1
-        expr_tokens = [pop_next()]
+        expr_tokens = [pop_next(), ]
         while i > 0:
             if peek_next()[0] is Token.START:
                 i += 1
@@ -74,24 +75,20 @@ def get_arg_tup(tokens):
         return expr_tokens
 
     tup = []
-    while tokens:
-        if peek_next()[0] is Token.NUM:
-            tup.append(pop_next()[1])
-        else:
+    while param_tokens:
+        if peek_next()[0] is Token.START:
             tup.append(parse(get_next_expr()))
+        else:
+            tup.append(pop_next()[1])
 
     return tuple(tup)
 
 
 def parse(tokens):
-    return (tokens[1][1], ) + get_arg_tup(tokens[2:-1])
-
-
-def comple(tree):
-    if type(tree) is int:
-        return tree
+    if len(tokens) is 1:
+        return tokens[0][1]
     else:
-        return apply(tree[0], *map(lambda branch: comple(branch), tree[1:]))
+        return (tokens[1][1], ) + parse_helper(tokens[2:-1])
 
 
 def apply(funcsym, *args):
@@ -101,12 +98,20 @@ def apply(funcsym, *args):
     return func(*args)
 
 
+def _compile(tree):
+    try:
+        return apply(tree[0], *map(lambda branch: _compile(branch), tree[1:]))
+    except TypeError:
+        return tree
+
+
 def compute(string):
-    ans = comple(parse(lex(string)))
-    print('%s = %f' % (string, ans))
+    pp.pprint(parse(lex(string)))
+    ans = _compile(parse(lex(string)))
+    print('%s = %d' % (string, ans))
     return ans
 
 
 if __name__ == "__main__":
-    test_string = '(+ (+ 10 10) 10)'
+    test_string = '(& 1 (- (+ 10 10) (^ 10 3)))'
     compute(test_string)
