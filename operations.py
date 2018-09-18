@@ -59,7 +59,8 @@ def power(a, b):
     return a**b
     # return 0
 
-sym_dict['^'] = ('exp','does it work? - YoungGyu')
+
+sym_dict['^'] = ('power','does it work? - YoungGyu')
 ############################################################
 
 

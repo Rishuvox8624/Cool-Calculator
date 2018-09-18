@@ -2,8 +2,8 @@
 # calculator.py
 
 from enum import Enum, auto
-import pprint as pp
 import operations
+
 
 class Token(Enum):
     START = auto()
@@ -102,9 +102,11 @@ def apply(funcsym, *args):
 
 
 def compute(string):
-    return comple(parse(lex(string)))
+    ans = comple(parse(lex(string)))
+    print('%s = %f' % (string, ans))
+    return ans
 
 
 if __name__ == "__main__":
-    test_str = '(+ (+ 10 10) 10)'
-    print('%s = %f' % (test_str, compute(test_str)))
+    test_string = '(+ (+ 10 10) 10)'
+    compute(test_string)
