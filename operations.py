@@ -59,14 +59,14 @@ def power(a, b):
     return a**b
     # return 0
 
-sym_dict['^'] = ('exp','does it work? - YoungGyu')
+
+sym_dict['^'] = ('power','does it work? - YoungGyu')
 ############################################################
 
 
 
 # AND Operation Entry ###########################
 # Desired Functionality: (& a b) = a & b
-# Hint: exponentiation in python is performed with the `**` symbol
 
 def _and(a, b):
     return a & b
