@@ -106,7 +106,6 @@ def _compile(tree):
 
 
 def compute(string):
-    pp.pprint(parse(lex(string)))
     ans = _compile(parse(lex(string)))
     print('%s = %d' % (string, ans))
     return ans
