@@ -64,7 +64,7 @@ it*
 1. Navigate to the repository folder and start up a python3 console.
 1. Type the following at the python prompt:
    ```python
-   from calculations import compute
+   from calculator import compute
    ```
 1. To test the addition operation (already implemented) type:
    ```python
