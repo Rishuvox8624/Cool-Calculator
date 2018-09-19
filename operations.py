@@ -52,7 +52,7 @@ sym_dict['*'] = ()
 
 
 # EXPONENTIATION Operation Entry ###########################
-# Desired Functionality: (^ a b) = ???
+# Desired Functionality: (^ a b) = a ** b
 # Hint: exponentiation in python is performed with the `**` symbol
 
 def power(a, b):
@@ -66,10 +66,10 @@ sym_dict['^'] = ('power','does it work? - YoungGyu')
 
 
 # AND Operation Entry ###########################
-# Desired Functionality: (& a b) = bool(a) & bool(b)
+# Desired Functionality: (& a b) = a and b
 
 def _and(a, b):
-    return 1 if bool(a) & bool(b) else 0
+    return a and b
 
 
 sym_dict['&'] = ('_and', 'Corban Swain')
