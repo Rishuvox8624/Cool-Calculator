@@ -3,7 +3,7 @@
 *An example repository to demonstrate collaboration on projects with GitHub
 pull requests.*
 
-## The Calculator
+## The Cool Calculator
 
 This calculator aims to implement a python-based compiler for a Scheme-like syntax for simple arithmetic operations. This Scheme-like syntax uses
 parentheses and prefix notation to indicate functional operations. For example:
